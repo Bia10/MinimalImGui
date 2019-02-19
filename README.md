@@ -34,6 +34,24 @@ sudo apt-get install -y \
     libfreetype6-dev
 ```
 
+### RedHat-based Systems
+
+The following instructions apply to:
+
+* Fedora 22 and higher
+
+```
+sudo dnf install -y \
+    gcc gcc-c++ make \
+    cmake \
+    mesa-libGL-devel \
+    libXrandr-devel \
+    libXinerama-devel \
+    libXcursor-devel \
+    libXi-devel \
+    freetype-devel
+```
+
 ## Building
 
 Check out sources with `--recursive` parameter for 3rd-party libraries:
@@ -45,7 +63,7 @@ git clone --recursive https://github.com/Postrediori/MinimalImGui.git
 Prepare build with CMake and build executable
 
 ```
-cd MinimalImGui
+cd MinimalImGui.git
 mkdir build && cd build
 cmake ..
 make
